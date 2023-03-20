@@ -1,0 +1,34 @@
+body{
+    min-height: 100vh;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+	background: url("images/background.jpg") no-repeat;
+	background-attachment: fixed;
+
+}
+
+h1{
+    text-align: center;
+}
+.card{
+    margin: 30px;
+    display: inline-block;
+}
+
+.container_card {
+	margin: 50px;
+	margin-top: 100px;
+	border-radius: 30px;
+	background-color: grey;
+	border-color: white;
+	border: 10px;
+}
+
+header{
+	font-family: 'Edu NSW ACT Foundation', cursive;
+	color: white;
+}
+
+h1{
+	font-family: 'Edu NSW ACT Foundation', cursive;
+	font-size: 100px;
+}
