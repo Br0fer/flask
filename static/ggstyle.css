@@ -1,3 +1,22 @@
 body{
+    min-height: 100vh;
     font-family: 'Edu NSW ACT Foundation', cursive;
+    background: rgb(71, 71, 71);
+    background: linear-gradient(to bottom right, darkblue, cyan) ;
+}
+
+p{
+    background-color: white;
+    padding: 10px;
+    margin: 50px;
+    border-radius: 24px;
+
+}
+
+h1{
+    text-align: center;
+}
+.card{
+    margin: 30px;
+    display: inline-block;
 }
