@@ -16,32 +16,16 @@
 		<h1>Рецепти</h1>
 	</header>
 <div class="container_card">
+	{% for recepie in recepies %}
 	<div class="card" style="width: 18rem;">
-		<img src="static/images/first.jpg" class="card-img-top" alt="...">
+		<img src={{recepie.img}} class="card-img-top" alt="...">
 		<div class="card-body">
-			<h5 class="card-title">Хрусткі булочки в духовці</h5>
-			<p class="card-text">Інгредієнти:<br>
-				✔️булочки (як для хот-догів)<br>
-				✔️морква по-корейськи<br>
-				✔️ковбаска<br>
-				✔️помідорка<br>
-				✔️сир твердий<br>
-				✔️кукурудза<br>
-				Приготування: <br>
-
-				Соус: змішуємо майонез, томатний соус та гірчицю в зернах. Начинку можна міняти під свій смак) Булочки розрізаемо, виймаємо серединку.Змішуємо всі інгредієнти, заправляємо соусом.
-				Начиняємо булочки і запікаємо 10-15 хв/190С.</p>
-			<a href="https://drive.google.com/file/d/1REr1Ojwys_h1ijHQGnWwakByKdrQlEPe/view?usp=sharing" class="btn btn-primary">Відео</a>
+			<h5 class="card-title">{{recepie.title}}</h5>
+			<p class="card-text">Інгредієнти: <br>{{recepie.ingredients}}</p>
+			<a href={{recepie.link}} class="btn btn-primary">Посилання</a>
 		</div>
 	</div>
-</div>
-<div class="card" style="width: 18rem;">
-	<img src="..." class="card-img-top" alt="...">
-	<div class="card-body">
-		<h5 class="card-title">{{recepies[0].title}}</h5>
-		<p class="card-text">{{recepies[0].ingredients}}</p>
-		<a href={{recepies[0].link}} class="btn btn-primary">Посилання</a>
-	</div>
+	{% endfor %}
 </div>
 </body>
 </html>

@@ -24,6 +24,7 @@ class Recepies(db.Model):
 	title = db.Column(db.String, nullable = False)
 	ingredients = db.Column(db.Text)
 	actions = db.Column(db.Text)
+	img = db.Column(db.Text)
 	link = db.Column(db.Text)
 	
 	user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
