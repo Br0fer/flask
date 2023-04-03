@@ -70,6 +70,11 @@
                 <label for="passwordCheck" class="form-label">Введіть пароль ще раз</label>
                 <input name="passwordCheck" type="password" class="form-control" id="passwordCheck" >
             </div>
+
+			{%for type, message in get_flashed_messages(True) %}
+            <div class="alert {{type}} my-3 "> {{message}} </div>
+            {% endfor %}
+
             <button type="submit" class="btn btn-primary">Зареєструватися</button>
             <a href="{{url_for('signin')}}" class="text-white">Вже маєте профіль? Увійти.</a>
         </form>
