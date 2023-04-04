@@ -1,6 +1,7 @@
-from flask import render_template, request, url_for, redirect, flash
 from app import app, db
-from models import User, Recepies
+from flask import flash, redirect, render_template, request, url_for
+from models import Recepies, User
+
 
 @app.route("/")  # Вказуємо url-адресу для виклику функції
 def index():
@@ -31,3 +32,11 @@ def signup():
 @app.route("/signin", methods = ["POST", "GET"])
 def signin():
 	return render_template("login.html")
+
+@app.route("/addin", methods=["POST", "GET"])
+def addin():
+	if request.method == "POST":
+		recepie = Recepies(title=request.form["title"], ingredients=request.form['ingredients'], actions=request.form['actions'], img=request.form['photo'])
+		db.session.add(recepie)
+		db.session.commit()
+	return render_template("recep_adder.html")

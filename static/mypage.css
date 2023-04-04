@@ -10,12 +10,12 @@ h1{
     text-align: center;
 }
 .card{
-    margin: 30px;
+    margin: 20px;
     display: inline-block;
 }
 
 .container_card {
-	margin: 50px;
+	margin: 40px;
 	margin-top: 100px;
 	border-radius: 30px;
 	background-color: grey;
@@ -35,4 +35,8 @@ h1{
 
 form{
 	color: white;
+}
+
+textarea{
+	height: 250px;
 }
