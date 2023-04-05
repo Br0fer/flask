@@ -39,4 +39,5 @@ def addin():
 		recepie = Recepies(title=request.form["title"], ingredients=request.form['ingredients'], actions=request.form['actions'], img=request.form['photo'])
 		db.session.add(recepie)
 		db.session.commit()
+		flash("Рецепт успішно додано!", "alert-success")
 	return render_template("recep_adder.html")
