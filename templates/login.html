@@ -62,6 +62,11 @@
                 <label for="password" class="form-label">Введіть ваш пароль</label>
                 <input name="password" type="password" class="form-control" id="password" >
             </div>
+
+			{% for type, message in get_flashed_messages(True) %}
+            <div class="alert {{type}} my-3 "> {{message}} </div>
+            {% endfor %}
+
             <button type="submit" class="btn btn-primary">Увійти</button>
             <a href="{{url_for('signup')}}" class="text-white">Створити профіль</a>
         </form>
