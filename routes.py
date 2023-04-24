@@ -51,6 +51,16 @@ def logout():
     flash("Ви вийшли з профілю", "alert-success")
     return redirect(url_for('signin'))
 
+@app.route("/profile")
+@login_required
+def profile():
+    return render_template("profile.html")
+
+@app.route("/recepies")
+@login_required
+def recepies():
+    return render_template("recepies.html")
+
 @app.route("/addin", methods=["POST", "GET"])
 def addin():
 	if request.method == "POST":
