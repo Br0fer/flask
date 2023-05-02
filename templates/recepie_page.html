@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+		{% if current_user.id == recepie.user_id %}
+		<h1 class="text-white">Інгредієнти</h1>
+		{% for ingredient in recepie.ingredients.split("✔️") %}
+		<p class="text-white center">{{ingredient}}</p>
+		{% endfor %}
+		<h1 class="text-white ">Що потрібно зробити</h1>
+		<p class="text-white center">{{recepie.actions}}</p>
+		{% else %}
+		<h1 class="text-white">Доступ заборонено</h1>
+		{% endif %}
+
+{% endblock content %}

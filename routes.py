@@ -62,10 +62,23 @@ def recepies():
     return render_template("recepies.html")
 
 @app.route("/addin", methods=["POST", "GET"])
+@login_required
 def addin():
 	if request.method == "POST":
-		recepie = Recepies(title=request.form["title"], ingredients=request.form['ingredients'], actions=request.form['actions'], img=request.form['photo'])
+		recepie = Recepies(title=request.form["title"],
+							ingredients=request.form['ingredients'],
+							actions=request.form['actions'],
+							img=request.form['photo'],
+							link=request.form['link'],
+							user_id = current_user.id)
 		db.session.add(recepie)
 		db.session.commit()
 		flash("Рецепт успішно додано!", "alert-success")
 	return render_template("recep_adder.html")
+
+@app.route("/recepies/<recepie_id>")
+@login_required
+def recepie_page(recepie_id):
+	recepie = Recepies.query.get(int(recepie_id))
+
+	return render_template("recepie_page.html", recepie = recepie)

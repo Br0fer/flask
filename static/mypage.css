@@ -9,6 +9,8 @@ body{
 h1{
     text-align: center;
 	color: white;
+	font-family: 'Edu NSW ACT Foundation', cursive;
+	font-size: 50px;
 }
 .card{
     margin: 20px;
@@ -19,7 +21,7 @@ h1{
 	margin: 40px;
 	margin-top: 100px;
 	border-radius: 30px;
-	background-color: grey;
+	background-color: rgba(237, 231, 225, 50%);
 	border-color: white;
 	border: 10px;
 }
@@ -29,15 +31,18 @@ header{
 	color: white;
 }
 
-h1{
-	font-family: 'Edu NSW ACT Foundation', cursive;
-	font-size: 100px;
-}
-
 form{
 	color: white;
 }
 
 textarea{
 	height: 250px;
+}
+
+.banner{
+	align: center;
+}
+
+.center{
+	text-align: center;
 }

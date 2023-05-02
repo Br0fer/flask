@@ -9,12 +9,18 @@
 			<img src={{recepie.img}} class="card-img-top" alt="...">
 			<div class="card-body">
 				<h5 class="card-title">{{recepie.title}}</h5>
-				<p class="card-text">Інгредієнти: <br>{{recepie.ingredients}}</p>
+				<p class="card-text">Інгредієнти:</p>
+				{% for ingredient in recepie.ingredients.split("✔️") %}
+				<p class="card-text">{{ingredient}}</p>
+				{% endfor %}
+				<p class="card-text">Інша інформація в рецепті</p>
+				{% if recepie.link != "" %}
 				<a href={{recepie.link}} class="btn btn-primary">Посилання</a>
+				{% endif %}
 			</div>
 		</div>
 		{% endfor %}
 	</div>
-	<a href="{{url_for('addin')}}" class="btn btn-primary">Додати рецепт</a>
+	<a href="{{url_for('addin')}}" class="btn btn-primary my-5">Додати рецепт</a>
 </main>
 {% endblock content %}
