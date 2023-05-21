@@ -18,7 +18,7 @@
 				{% if recepie.link != "" %}
 				<a href={{recepie.link}} class="btn btn-primary">Посилання</a>
 				{% endif %}
-				<a href="{{ url_for('recepie_page', recepie_id = recepie.id)}}" class="btn btn-primary align-left">Відкрити</a>
+				<a href="{{ url_for('recepie_page', recepie_id = recepie.id)}}" class="align-left stretched-link"></a>
 			</div>
 		</div>
 		{% endfor %}

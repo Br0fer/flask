@@ -1,7 +1,7 @@
 body{
     min-height: 100vh;
     font-family: 'Edu NSW ACT Foundation', cursive;
-	background: url("images/background.jpg") no-repeat;
+	background-image: url(images/bg.jpg);
 	background-attachment: fixed;
 
 }
@@ -10,7 +10,7 @@ h1{
     text-align: center;
 	color: white;
 	font-family: 'Edu NSW ACT Foundation', cursive;
-	font-size: 50px;
+	font-size: 50
 }
 .card{
     margin: 20px;
@@ -21,7 +21,7 @@ h1{
 	margin: 40px;
 	margin-top: 100px;
 	border-radius: 30px;
-	background-color: rgba(237, 231, 225, 50%);
+	background-color: rgba(237, 231, 225, 0.171);
 	border-color: white;
 	border: 10px;
 }
@@ -40,9 +40,30 @@ textarea{
 }
 
 .banner{
-	align: center;
+	box-align: center;
 }
 
 .center{
 	text-align: center;
+}
+
+.card{
+	background-image: url(images/bg.jpg); 
+	color: #fafafa;
+}
+
+.navbar{
+	background-image: url(images/bg.jpg); 
+}
+
+.nav-link{
+	color: #aaaaaa;
+}
+
+.nav-link:hover{
+	color: #fafafa;
+}
+
+.align-right{
+	align: right;
 }
