@@ -67,3 +67,12 @@ textarea{
 .align-right{
 	align: right;
 }
+
+.container-fluid{
+	margin: 0;
+	padding: 0;
+}
+
+.col-3{
+	
+}
