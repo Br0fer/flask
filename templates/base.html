@@ -27,6 +27,7 @@
         <!-- Шапка сайту: назва, логотип, навігація -->
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
+
                 <a class="navbar-brand" href="#"><img
                         src="../static/images/logo.png" alt="Logo"
                         width="80" height="70" class="d-inline-block align-text-top"></a>
@@ -41,7 +42,7 @@
                             href="{{ url_for('index') }}">Головна</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('recepies') }}">Рецепти</a>
+                            <a class="nav-link" href="{{ url_for('recepies_page') }}">Рецепти</a>
                         </li>
                         {% if current_user.is_authenticated %}
                             <li class="nav-item">
