@@ -13,7 +13,7 @@ db.init_app(app)
 
 login_manager.init_app(app)
 login_manager.login_view = "signin"
-login_manager.login_message = "Для перегляду сторінкии увійдіть або зареєструйтеся"
+login_manager.login_message = "Для перегляду сторінки увійдіть або зареєструйтеся"
 login_manager.login_message_category = "alert-warning"
 
 from routes import *

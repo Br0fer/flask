@@ -6,7 +6,7 @@ body{
 
 }
 
-h1{
+h1, h2, h3, h4, h5, h6{
     text-align: center;
 	color: white;
 	font-family: 'Edu NSW ACT Foundation', cursive;
@@ -73,6 +73,13 @@ textarea{
 	padding: 0;
 }
 
-.col-3{
-	
+
+.alc{
+	align-items: center;
+	align-content: center;
 }
+
+.tw{
+	color: white;
+}
+
