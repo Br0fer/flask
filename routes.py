@@ -2,7 +2,9 @@ from app import app, db
 from flask import flash, redirect, render_template, request, url_for
 from models import Recepies, User
 from flask_login import login_user, logout_user, current_user, login_required
+import os
 import datetime
+import os
 
 
 @app.route("/")  # Вказуємо url-адресу для виклику функції
@@ -50,14 +52,15 @@ def signin():
 @login_required
 def logout():
     logout_user()
-    flash("Ви вийшли з профілю", "alert-success")
+    flash("Ви вийшли з профілю", "alert-warning")
     return redirect(url_for('signin'))
 
 
 @app.route("/profile")
 @login_required
 def profile():
-    return render_template("profile.html")
+    recepies = Recepies.query.all()
+    return render_template("profile.html", recepies=recepies)
 
 
 @app.route("/recepies_page")
@@ -71,15 +74,18 @@ def recepies_page():
 @login_required
 def addin():
     if request.method == "POST":
+        file = request.files['photoFile']
+        file.save(os.path.join(app.config["IMAGE_UPLOADS"], file.filename))
+        print(file)
         recepie = Recepies(title=request.form["title"],
                            ingredients=request.form['ingredients'],
                            actions=request.form['actions'],
-                           img=request.form['photo'],
+                           img=(os.path.join("static/images/uploades", file.filename)),
                            link=request.form['link'],
                            user_id=current_user.id)
         db.session.add(recepie)
         db.session.commit()
-        flash("Рецепт успішно додано!", "alert-success")
+        flash("Recepie is added", "alert-success")
     return render_template("recep_adder.html")
 
 

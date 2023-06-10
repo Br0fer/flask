@@ -1,22 +1,39 @@
 {% extends 'base.html' %}
 
+{% block title %}
+
+    <title>{{ recepie.title }}</title>
+    
+{% endblock title %}
+
 {% block content %}
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-7">
-			<h2 class="text-white">Інгредієнти:</h2>
-				<ul>
-				{% for ingredient in recepie.ingredients.split(",") %}
-				<li class="text-white">{{ingredient}}</li>
-				{% endfor %}
-				</ul>
-				<h2 class="text-white ">Що потрібно зробити</h1>
-				<p class="text-white">{{recepie.actions}}</p>		
-		</div>
-		<div class="col-5">
-			<img src="{{ recepie.img }}" alt=""  class="img-fluid">
-		</div>
-	</div>
-</div>
+<main class="fixed">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-7">
+                <h2 class="text-white">Ingredients</h2>
+                <ul>
+                    {% for ingredient in recepie.ingredients.split(", ") %}
+                    <li class="text-white m-2">{{ingredient}}</li>
+                    {% endfor %}
+                </ul>
+                <h2 class="text-white">Cooking sequence</h2>
+                <ol>
+                    {% for action in recepie.actions.split("\n") %}
+                    <li class="tw m-3">{{action}}</li>
+                    {% endfor %}
+                </ol>
+
+            </div>
+            <div class="col-5">
+                <img src="../{{ recepie.img }}" alt="..."  class="img-fluid m-3 border_img">
+                {% if recepie.link != "" %}
+				    <a href="{{recepie.link}}" class="btn btn-primary alc">Link</a>
+				{% endif %}
+            </div>
+        </div>
+    </div>
+</main>
+
 
 {% endblock content %}

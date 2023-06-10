@@ -1,13 +1,26 @@
 {% extends 'base.html' %}
 
 {% block title %}
-<title>Профіль</title>
+    <title>Profile</title>
 {% endblock title %}
 
 {% block content %}
-<main class="container">
-    <h1>Профіль</h1>
-    <!-- Головний контент сторінки -->
+<main>
+    <h1>Profile</h1>
+    <div class="container_card">
+        {% for recepie in current_user.recepies %}
+            <div class="card" style="width: 18rem;">
+                <img src="{{ recepie.img }}" alt="..." class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">{{ recepie.title }}</h5>
+                    {% if recepie.link != "" %}
+                    <a href="{{ recepie.link }}" class="btn btn-primary">Link</a>
+                    {% endif %}
+                    <a href="{{ url_for('recepie_page', recepie_id = recepie.id) }}" class="stretched-link"></a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 </main>
 {% endblock content %}
     

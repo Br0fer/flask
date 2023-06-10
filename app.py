@@ -9,6 +9,7 @@ app = Flask(__name__)  # Створюємо вебдодаток Flask
 app.config['SECRET_KEY'] = '70c4b7dfda8bd66dea2a9174e616c188'
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///recepies.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config["IMAGE_UPLOADS"] = "C:/Users/tarik/OneDrive/Документи/Homework/IT/myweb/flask/static/images/uploades"
 db.init_app(app)
 
 login_manager.init_app(app)

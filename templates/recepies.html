@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 
 {% block title %}
-<title>Рецепти</title>
+    <title>Recepies</title>
 {% endblock title %}
 
 {% block content %}
 <main>
-    <h1>Рецепти</h1>
+    <h1>Recepies</h1>
     <!-- Головний контент сторінки -->
 	<div class="container_card">
     {% for recepie in recepies %}
@@ -14,9 +14,6 @@
 			<img src="{{recepie.img}}" class="card-img-top" alt="...">
 			<div class="card-body">
 				<h5 class="card-title">{{recepie.title}}</h5>
-				{% if recepie.link != "" %}
-				<a href="{{recepie.link}}" class="btn btn-primary">Посилання</a>
-				{% endif %}
 				<a href="{{ url_for('recepie_page', recepie_id = recepie.id)}}" class="align-left stretched-link"></a>
 			</div>
 		</div>
