@@ -7,6 +7,8 @@
     <list default="true" id="325c2f6b-f2f9-4206-8abd-de243819bab4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/instance/recepies.db" beforeDir="false" afterPath="$PROJECT_DIR$/instance/recepies.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/uploades/gajar-halwa.png" beforeDir="false" afterPath="$PROJECT_DIR$/static/images/uploades/gajar-halwa.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +81,7 @@
       <workItem from="1686337584894" duration="1944000" />
       <workItem from="1686340491107" duration="2446000" />
       <workItem from="1686342983946" duration="1682000" />
-      <workItem from="1686401164073" duration="8242000" />
+      <workItem from="1686401164073" duration="9019000" />
     </task>
     <servers />
   </component>
@@ -87,6 +89,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/flask$flask.coverage" NAME="flask Coverage Results" MODIFIED="1686337693131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/flask$flask.coverage" NAME="flask Coverage Results" MODIFIED="1686421417599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

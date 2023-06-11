@@ -13,9 +13,6 @@
                 <img src="{{ recepie.img }}" alt="..." class="card-img-top">
                 <div class="card-body">
                     <h5 class="card-title">{{ recepie.title }}</h5>
-                    {% if recepie.link != "" %}
-                    <a href="{{ recepie.link }}" class="btn btn-primary">Link</a>
-                    {% endif %}
                     <a href="{{ url_for('recepie_page', recepie_id = recepie.id) }}" class="stretched-link"></a>
                 </div>
             </div>
